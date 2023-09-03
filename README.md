@@ -1,10 +1,11 @@
 # 사용법
-docker를 통한 실행
+###Docker를 통한 실행
 ```
 docker compose build
 docker compose up
 ```
 
+###직접 실행
 필요한 패키지를 설치
 ```
 pip install -r requirements.txt
