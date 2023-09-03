@@ -23,11 +23,13 @@ docker compose up
 
 API 실행
 ```
-python api/main.py
+cd api
+python main.py
 ```
 인터페이스 실행
 ```
-streamlit run interface/interface.py
+cd interface
+streamlit run interface.py
 ```
 
 실행 후 http://localhost:8501/ 에 인터페이스 접속 가능하며 http://localhost:8000/docs 에서 API 문서 확인 가능
