@@ -69,8 +69,8 @@ if __name__ == "__main__":
     import uvicorn
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p", "--port", type=str, default="8000", help="API 포트")
-    parser.add_argument("-h", "--host", type=str, default="0.0.0.0")
+    parser.add_argument("-P", "--port", type=str, default="8000", help="API 포트")
+    parser.add_argument("-H", "--host", type=str, default="0.0.0.0", help="Host 주소")
     args = parser.parse_args()
 
     # 서버 실행
