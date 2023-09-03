@@ -172,8 +172,20 @@ def get_perspective_matrix(img):
 async def visualize_transform(img, output_path):
     try:
         h, w, _ = img.shape
-        fourcc = cv2.VideoWriter_fourcc(*'avc1')
-        out = cv2.VideoWriter(output_path, fourcc, 20.0, (w, h))
+        
+        try:
+            fourcc = cv2.VideoWriter_fourcc(*'avc1')
+            out = cv2.VideoWriter(output_path, fourcc, 20.0, (w, h))
+
+        except cv2.error as h264_error:
+            print("H.264 codec failed to load:", h264_error)
+            
+            try:
+                fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+                out = cv2.VideoWriter(output_path, fourcc, 20.0, (w, h))
+            except cv2.error as mp4v_error:
+                print("MPEG-4 codec failed to load:", mp4v_error)
+                raise mp4v_error
 
         animation_duration_sec = 1
         frame_rate = 24
