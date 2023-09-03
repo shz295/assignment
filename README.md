@@ -32,6 +32,8 @@ streamlit run interface/interface.py
 
 실행 후 http://localhost:8501/ 에 인터페이스 접속 가능하며 http://localhost:8000/docs 에서 API 문서 확인 가능
 
+전처리 시각화 기능을 사용하려면 OpenCV가 FFMPeg 지원을 포함하여 빌드되어 있어야 합니다. 이는 기본적으로 라이선스 문제로 인해 사용할 수 없습니다. 그러나 Docker 이미지를 실행하는 경우에는 사용 가능합니다.
+
 # 개요
 
 최종 모델은 이진화된 MNIST 데이터 세트에서 훈련되고 장난감 블록 데이터 세트에서 미세 조정된 LeNet-5 CNN 아키텍처입니다. 추론 파이프라인은 다음과 같습니다.
