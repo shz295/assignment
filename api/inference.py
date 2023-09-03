@@ -4,7 +4,7 @@ import numpy as np
 from cv2 import imwrite
 
 # 저장된 모델 불러오기
-model = load_model('lenet_os.keras')
+model = load_model('lenet.h5')
 
 
 def get_class(i):
