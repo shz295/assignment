@@ -29,7 +29,7 @@ def infer(image, return_r=False):
 
     pred, r, confidence = None, None, None
 
-    if main_pred[36] > 0.5 and gray_pred[36] > 0.5:
+    if main_pred[36] > 0.3 and gray_pred[36] > 0.3:
         pred = 36
         confidence = max(main_pred[36], gray_pred[36])
         r = False
